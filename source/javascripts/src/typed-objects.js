@@ -12,6 +12,13 @@ function Tree() {
 
 }
 
+function Orange() {
+    this.diameter = Math.floor(Math.random() * 2 + 1);
+}
+
+function pickOrange() {
+    return new Orange;
+}
 Tree.prototype = {
     grow: function() {
         this.age += 1;
@@ -21,7 +28,11 @@ Tree.prototype = {
         };
         if (this.age > MAX_AGE) {
             this.isAlive = false;
-        }
+        };
+    },
+
+    dropOrange: function() {
+        return new Orange;
     }
 
 

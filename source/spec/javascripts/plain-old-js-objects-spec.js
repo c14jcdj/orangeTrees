@@ -63,7 +63,7 @@ describe("createTree", function() {
     });
 
     describe("dropOrange", function() {
-        xit("should return the orange that is removed from oranges", function() {
+        it("should return the orange that is removed from oranges", function() {
             var tree = createTree();
             while (tree.age < FRUIT_BEARING_AGE) {
                 tree.grow();
@@ -73,10 +73,10 @@ describe("createTree", function() {
     });
 
     describe("pickOrange", function() {
-        xit("should return a orange object", function() {
+        it("should return a orange object", function() {
             expect(pickOrange()).toBeDefined();
         });
-        xit("should return an orange with a random diameter > 0", function() {
+        it("should return an orange with a random diameter > 0", function() {
             var orange = pickOrange();
             expect(orange.diameter).toBeGreaterThan(0);
         });
