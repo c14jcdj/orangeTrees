@@ -1,0 +1,22 @@
+.display-tree-small{
+  background: url('../images/tree.jpeg');
+  background-repeat: no-repeat;
+  height:200px;
+  width:200px;
+  border: solid black 2px;
+}
+
+.display-tree-big{
+  background: url('../images/tree_big.jpg');
+  background-repeat: no-repeat;
+  height:1000px;
+  width:1000px;
+  border: solid black 2px;
+}
+
+.hidden {
+  /* There are more accessible ways to do this:
+     http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+  */
+  display: none;
+}
