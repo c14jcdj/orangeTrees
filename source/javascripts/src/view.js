@@ -2,8 +2,6 @@ $(document).ready(function() {
     tController = new TreeController();
     tView = new TreeView();
     tController.run();
-
-
 });
 
 function TreeView() {}
@@ -13,7 +11,8 @@ function TreeController() {}
 TreeController.prototype.run = function() {
     $('.plant').on('click', function() {
         var tree = new Tree();
-        tView.addGrove();
+        plantButton = this
+        tView.addGrove(plantButton);
         tView.age(tree);
         tView.pick(tree);
     })
@@ -21,9 +20,8 @@ TreeController.prototype.run = function() {
 
 TreeView.prototype = {
     addGrove: function() {
-
         $('#orange-tree-template').removeClass();
-        this.disabled = true;
+        plantButton.disabled = true;
     },
 
 
