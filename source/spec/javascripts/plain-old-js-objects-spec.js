@@ -16,25 +16,25 @@ describe("createTree", function() {
     });
     describe("grow", function() {
 
-        xit("should increase the age of the tree by 1 year", function() {
+        it("should increase the age of the tree by 1 year", function() {
             var tree = createTree();
             tree.grow();
             expect(tree.age).toEqual(1);
         });
 
-        xit("should increase the height of the tree by 10 inches", function() {
+        it("should increase the height of the tree by 10 inches", function() {
             var tree = createTree();
             tree.grow();
             expect(tree.height).toEqual(10);
         });
-        xit("should add a random number of oranges if age = FRUIT_BEARING_AGE", function() {
+        it("should add a random number of oranges if age = FRUIT_BEARING_AGE", function() {
             var tree = createTree();
             while (tree.age < FRUIT_BEARING_AGE) {
                 tree.grow();
             }
             expect(tree.orangeCount).toBeGreaterThan(0);
         });
-        xit("should have 0 oranges if age < FRUIT_BEARING_AGE", function() {
+        it("should have 0 oranges if age < FRUIT_BEARING_AGE", function() {
             var tree = createTree();
             while (tree.age < (FRUIT_BEARING_AGE - 1)) {
                 tree.grow();
@@ -44,7 +44,7 @@ describe("createTree", function() {
     });
 
     describe("die", function() {
-        xit("should be alive when age <= MAX_AGE", function() {
+        it("should be alive when age <= MAX_AGE", function() {
             var tree = createTree();
             while (tree.age < (MAX_AGE - 1)) {
                 tree.grow();
@@ -52,7 +52,7 @@ describe("createTree", function() {
             tree.grow();
             expect(tree.isAlive).toEqual(true);
         });
-        xit("should die when age > MAX_AGE", function() {
+        it("should die when age > MAX_AGE", function() {
             var tree = createTree();
             while (tree.age < MAX_AGE) {
                 tree.grow();
